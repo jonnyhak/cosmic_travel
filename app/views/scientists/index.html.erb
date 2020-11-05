@@ -1,0 +1,8 @@
+
+<h1>Scientists</h1>
+
+<% @scientists.each do |scientist| %>
+    <p><%= link_to scientist.name, scientist_path(scientist) %> 
+    <%= button_to "Delete Scientist", scientist_path(scientist), method: :delete %>
+    </p>
+<% end %>
